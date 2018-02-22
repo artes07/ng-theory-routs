@@ -6,7 +6,9 @@ import { AppComponent } from './app.component';
 import { CarsPageComponent } from './cars-page/cars-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import {CarsService} from './cars.service';
-
+import {FormsModule} from '@angular/forms';
+import {HttpModule} from '@angular/http';
+import {AppRoutingModule} from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,10 @@ import {CarsService} from './cars.service';
     HomePageComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    HttpModule,
+    AppRoutingModule
   ],
   providers: [CarsService],
   bootstrap: [AppComponent]
